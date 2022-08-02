@@ -1,0 +1,31 @@
+
+.field.grid, .formgrid.grid {
+  margin-top: 0;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+  margin-top: -0.5rem;
+}
+/* * {
+  box-sizing: border-box;
+} */
+
+
+
+h5[_ngcontent-iln-c58] {
+  margin: 1.5rem 0 1rem;
+    font-family: inherit;
+    font-weight: 600;
+    line-height: 1.2;
+    color: inherit;
+    font-size: 1.25rem
+}
+
+
+.p-fluid .p-inputtext {
+  width: 100%;
+}

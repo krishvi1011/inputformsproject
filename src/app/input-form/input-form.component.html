@@ -1,0 +1,122 @@
+<h5>Input Text</h5>
+
+<div class="grid formgrid">
+  <div class="col-12 md:col-4">
+    <div class="p-inputgroup">
+      <input
+        type="text"
+        pInputText
+        [(ngModel)]="value1"
+        placeholder="Default"
+      />
+      <span class="p-ml-2">{{ value1 }}</span>
+    </div>
+  </div>
+  <div class="col-12 md:col-4">
+    <div class="p-inputgroup">
+      <input
+        id="disabled-input"
+        type="text"
+        pInputText
+        [disabled]="disabled"
+        placeholder="Disabled"
+      />
+    </div>
+  </div>
+  <div class="col-12 md:col-4">
+    <div class="p-inputgroup">
+      <input
+        id="username2"
+        type="username"
+        aria-describedby="username2-help"
+        class="ng-invalid ng-dirty"
+        pInputText
+        placeholder="Invalid"
+      />
+    </div>
+  </div>
+
+
+</div>
+<h5>Icons</h5>
+<div class="grid formgrid">
+  <div class="col-12 md:col-4">
+    <div class="p-inputgroup">
+      <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+      <input type="text" pInputText placeholder="Username" />
+    </div>
+  </div>
+
+  <div class="col-12 md:col-4">
+    <div class="p-inputgroup">
+      <span class="p-inputgroup-addon">$</span>
+      <input type="text" pInputText placeholder="Price" />
+      <span class="p-inputgroup-addon">.00</span>
+    </div>
+  </div>
+
+  <div class="col-12 md:col-4">
+    <div class="p-inputgroup">
+      <span class="p-inputgroup-addon">www</span>
+      <input type="text" pInputText placeholder="Website" />
+    </div>
+  </div>
+</div>
+<h5>Float Label</h5>
+<div class="p-grid p-fluid">
+  <div class="p-field p-col-12 p-md-3">
+    <span class="p-float-label">
+      <input id="float-input" type="text" pInputText />
+      <label for="float-input">Username</label>
+    </span>
+  </div>
+</div>
+
+<h5>Text Area</h5>
+<div class="p-grid p-fluid">
+  <div class="p-field p-col-12 p-md-3">
+    <textarea
+    name="text-area"
+    id=""
+    cols="30"
+    rows="10"
+    class="p-inputtextarea p-inputtext p-component p-element"
+  >
+  Your message</textarea
+  >
+  </div>
+</div>
+
+
+
+<div class="p-grid p-fluid">
+  <div class="p-field p-col-12 p-md-3">
+    <h5>Auto Complete</h5>
+    <input type="text" pInputText [(ngModel)]="value1" placeholder="Autocomplete" />
+  </div>
+</div>
+
+
+
+<h5>Calender</h5>
+<div class="p-grid p-fluid">
+  <div class="p-field p-col-12 p-md-3">
+    <p-calendar [(ngModel)]="date3" [showIcon]="true" inputId="icon"></p-calendar>
+
+  </div>
+</div>
+<h5>Input Number</h5>
+<div class="p-grid p-fluid">
+  <div class="p-field p-col-12 p-md-3">
+    <p-inputNumber [(ngModel)]="value17" [showButtons]="true" inputId="stacked">
+    </p-inputNumber>
+  </div>
+</div>
+
+<h5>Chips</h5>
+<div class="p-grid p-fluid">
+  <div class="p-field p-col-12 p-md-3">
+    <p-chips [(ngModel)]="values1" ></p-chips>
+  </div>
+</div>
+

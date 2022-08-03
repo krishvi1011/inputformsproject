@@ -16,7 +16,7 @@ body {
 }
 .grid {
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     margin-right: -0.5rem;
     margin-left: -0.5rem;
     margin-top: -0.5rem;
@@ -33,3 +33,8 @@ body {
 }
 
 
+.card p-fluid{
+  padding: 28px;
+  margin: 28px;
+  background: white;
+}

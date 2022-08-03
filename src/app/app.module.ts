@@ -23,6 +23,7 @@ import {InputSwitchModule} from 'primeng/inputswitch';
 import { OptionsComponent } from './options/options.component';
 import {ToggleButtonModule} from 'primeng/togglebutton';
 import {SelectButtonModule} from 'primeng/selectbutton';
+import { CardsComponent } from './cards/cards.component';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import {SelectButtonModule} from 'primeng/selectbutton';
     CheckboxComponent,
     MultiSelectComponent,
     SliderComponent,
-    OptionsComponent
+    OptionsComponent,
+    CardsComponent
   ],
   imports: [
     BrowserModule,

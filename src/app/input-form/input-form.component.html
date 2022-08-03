@@ -1,18 +1,19 @@
-<h5>Input Text</h5>
+<h5 style="font-size: 17.5px; margin: 21px 0px 14px;">Input Text</h5>
 
 <div class="grid formgrid">
-  <div class="col-12 md:col-4">
+  <div class="col-12 md:col-4" style="padding: 0px 7px;">
     <div class="p-inputgroup">
       <input
         type="text"
         pInputText
         [(ngModel)]="value1"
         placeholder="Default"
+        style="padding: 10.5px;"
       />
       <span class="p-ml-2">{{ value1 }}</span>
     </div>
   </div>
-  <div class="col-12 md:col-4">
+  <div class="col-12 md:col-4" style="padding: 0px 7px;">
     <div class="p-inputgroup">
       <input
         id="disabled-input"
@@ -20,10 +21,11 @@
         pInputText
         [disabled]="disabled"
         placeholder="Disabled"
+        style="padding: 10.5px;"
       />
     </div>
   </div>
-  <div class="col-12 md:col-4">
+  <div class="col-12 md:col-4" style="padding: 0px 7px;">
     <div class="p-inputgroup">
       <input
         id="username2"
@@ -32,47 +34,48 @@
         class="ng-invalid ng-dirty"
         pInputText
         placeholder="Invalid"
+        style="padding: 10.5px;"
       />
     </div>
   </div>
 
 
 </div>
-<h5>Icons</h5>
+<h5 style="font-size: 17.5px; margin: 21px 0px 14px;">Icons</h5>
 <div class="grid formgrid">
-  <div class="col-12 md:col-4">
+  <div class="col-12 md:col-4 " style="padding: 0px 7px;">
     <div class="p-inputgroup">
       <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
-      <input type="text" pInputText placeholder="Username" />
+      <input type="text" pInputText placeholder="Username" style="padding: 10.5px;" />
     </div>
   </div>
 
-  <div class="col-12 md:col-4">
+  <div class="col-12 md:col-4" style="padding: 0px 7px;">
     <div class="p-inputgroup">
       <span class="p-inputgroup-addon">$</span>
-      <input type="text" pInputText placeholder="Price" />
+      <input type="text" pInputText placeholder="Price" style="padding: 10.5px;"/>
       <span class="p-inputgroup-addon">.00</span>
     </div>
   </div>
 
-  <div class="col-12 md:col-4">
+  <div class="col-12 md:col-4" style="padding: 0px 7px;">
     <div class="p-inputgroup">
       <span class="p-inputgroup-addon">www</span>
-      <input type="text" pInputText placeholder="Website" />
+      <input type="text" pInputText placeholder="Website" style="padding: 10.5px;" />
     </div>
   </div>
 </div>
-<h5>Float Label</h5>
+<h5 style="font-size: 17.5px; margin: 21px 0px 14px;">Float Label</h5>
 <div class="p-grid p-fluid">
   <div class="p-field p-col-12 p-md-3">
     <span class="p-float-label">
-      <input id="float-input" type="text" pInputText />
+      <input id="float-input" type="text" pInputText style="padding: 10.5px;" />
       <label for="float-input">Username</label>
     </span>
   </div>
 </div>
 
-<h5>Text Area</h5>
+<h5 style="font-size: 17.5px; margin: 21px 0px 14px;">Text Area</h5>
 <div class="p-grid p-fluid">
   <div class="p-field p-col-12 p-md-3">
     <textarea
@@ -91,29 +94,29 @@
 
 <div class="p-grid p-fluid">
   <div class="p-field p-col-12 p-md-3">
-    <h5>Auto Complete</h5>
-    <input type="text" pInputText [(ngModel)]="value1" placeholder="Autocomplete" />
+    <h5 style="font-size: 17.5px;margin: 21px 0px 14px;">Auto Complete</h5>
+    <input type="text" pInputText [(ngModel)]="value1" placeholder="Autocomplete" style="padding: 10.5px;" />
   </div>
 </div>
 
 
 
-<h5>Calender</h5>
+<h5 style="font-size: 17.5px;margin: 21px 0px 14px;">Calender</h5>
 <div class="p-grid p-fluid">
   <div class="p-field p-col-12 p-md-3">
-    <p-calendar [(ngModel)]="date3" [showIcon]="true" inputId="icon"></p-calendar>
+    <p-calendar [(ngModel)]="date3" [showIcon]="true" inputId="icon" style="padding: 10.5px;"></p-calendar>
 
   </div>
 </div>
-<h5>Input Number</h5>
+<h5 style="font-size: 17.5px;margin: 21px 0px 14px;">Input Number</h5>
 <div class="p-grid p-fluid">
   <div class="p-field p-col-12 p-md-3">
-    <p-inputNumber [(ngModel)]="value17" [showButtons]="true" inputId="stacked">
+    <p-inputNumber [(ngModel)]="value17" [showButtons]="true" inputId="stacked" >
     </p-inputNumber>
   </div>
 </div>
 
-<h5>Chips</h5>
+<h5 style="font-size: 17.5px;margin: 21px 0px 14px;">Chips</h5>
 <div class="p-grid p-fluid">
   <div class="p-field p-col-12 p-md-3">
     <p-chips [(ngModel)]="values1" ></p-chips>

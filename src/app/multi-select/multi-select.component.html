@@ -1,0 +1,17 @@
+<h5>ListBox</h5>
+<p-listbox [options]="countries" [(ngModel)]="selectedCountries" [metaKeySelection]="false" [checkbox]="true"
+  [filter]="true" [multiple]="true" optionLabel="name" [listStyle]="{'max-height':'250px'}" [style]="{'width':'15rem'}">
+  <ng-template let-country pTemplate="item">
+    <div class="country-item">
+      <div>{{country.name}}</div>
+    </div>
+  </ng-template>
+</p-listbox>
+
+<h5>DropDown</h5>
+<p-dropdown [options]="cities" [(ngModel)]="selectedCity2" [editable]="true" optionLabel="name"></p-dropdown>
+
+
+<h5>MultiSelect</h5>
+<p-multiSelect [options]="cities" [(ngModel)]="selectedCities2" defaultLabel="Select a City" optionLabel="name"
+	display="chip"></p-multiSelect>

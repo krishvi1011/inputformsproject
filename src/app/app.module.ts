@@ -25,7 +25,9 @@ import {ToggleButtonModule} from 'primeng/togglebutton';
 import {SelectButtonModule} from 'primeng/selectbutton';
 import { CardsComponent } from './cards/cards.component';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-
+import { ButtonModule } from 'primeng/button';
+import { RippleModule } from 'primeng/ripple';
+import { ButtonsComponent } from './buttons/buttons.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,8 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
     MultiSelectComponent,
     SliderComponent,
     OptionsComponent,
-    CardsComponent
+    CardsComponent,
+    ButtonsComponent
   ],
   imports: [
     BrowserModule,
@@ -55,7 +58,9 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
     InputSwitchModule,
     ToggleButtonModule,
     SelectButtonModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ButtonModule,
+    RippleModule
 
   ],
   providers: [],

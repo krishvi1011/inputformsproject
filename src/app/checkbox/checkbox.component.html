@@ -1,37 +1,37 @@
 <h5 style="font-size: 17.5px;margin: 21px 0px 14px;">RadioButton</h5>
 <div class="grid">
-  <div class="col-12 md:col-4" style="padding: 7px;">
-    <div class="p-field-radiobutton">
+  <div class="col-12 md:col-4" style="padding: 0px 7px;">
+    <div class="p-field-radiobutton" style="margin: 0px 0px 0px 7px;">
       <p-radioButton
         name="city"
         value="Chicago"
         [(ngModel)]="city"
         inputId="city1"
-        style="margin:0px 0px 14px"
+
       ></p-radioButton>
       <label for="city1" style="margin: 0px 0px 0px 7px;">Option 1</label>
     </div>
   </div>
-  <div class="col-12 md:col-4" style="padding: 0px 7px;">
-    <div class="p-field-radiobutton">
+  <div class="col-12 md:col-4" style="padding: 0px 7px;" >
+    <div class="p-field-radiobutton" style="margin: 0px 0px 0px 7px;">
       <p-radioButton
         name="city"
         value="Los Angeles"
         [(ngModel)]="city"
         inputId="city2"
-        style="margin:0px 0px 14px"
+
       ></p-radioButton>
       <label for="city2" style="margin: 0px 0px 0px 7px;">Option 2</label>
     </div>
   </div>
   <div class="col-12 md:col-4" style="padding: 0px 7px;">
-    <div class="p-field-radiobutton">
+    <div class="p-field-radiobutton" style="margin: 0px 0px 0px 7px;">
       <p-radioButton
         name="city"
         value="New York"
         [(ngModel)]="city"
         inputId="city3"
-        style="margin:0px 0px 14px"
+
       ></p-radioButton>
       <label for="city3" style="margin: 0px 0px 0px 7px;">Option 2</label>
     </div>
@@ -41,25 +41,25 @@
 <h5 style="font-size: 17.5px;margin: 21px 0px 14px;">CheckBox</h5>
 <div class="grid">
   <div class="col-12 md:col-4" style="padding: 0px 7px;">
-    <div class="p-field-checkbox">
+    <div class="p-field-checkbox" style="margin: 0px 0px 0px 7px;">
       <p-checkbox
         name="group1"
         value="New York"
         [(ngModel)]="selectedCities"
         inputId="ny"
       ></p-checkbox>
-      <label for="ny">Option 1</label>
+      <label for="ny" style="margin: 0px 0px 0px 7px;">Option 1</label>
     </div>
   </div>
   <div class="col-12 md:col-4" style="padding: 0px 7px;">
-    <div class="p-field-checkbox">
+    <div class="p-field-checkbox" style="margin: 0px 0px 0px 7px;">
       <p-checkbox
         name="group1"
         value="San Francisco"
         [(ngModel)]="selectedCities"
         inputId="sf"
       ></p-checkbox>
-      <label for="sf">Option 2</label>
+      <label for="sf" style="margin: 0px 0px 0px 7px;">Option 2</label>
     </div>
   </div>
   <div class="col-12 md:col-4" style="padding: 0px 7px;">
@@ -69,8 +69,9 @@
         value="Los Angeles"
         [(ngModel)]="selectedCities"
         inputId="la"
+        style="margin: 0px 0px 0px 7px;"
       ></p-checkbox>
-      <label for="la">Option 3</label>
+      <label for="la" style="margin: 0px 0px 0px 7px;">Option 3</label>
     </div>
   </div>
 </div>

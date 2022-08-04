@@ -24,6 +24,7 @@ import { OptionsComponent } from './options/options.component';
 import {ToggleButtonModule} from 'primeng/togglebutton';
 import {SelectButtonModule} from 'primeng/selectbutton';
 import { CardsComponent } from './cards/cards.component';
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 
 @NgModule({
@@ -53,7 +54,8 @@ import { CardsComponent } from './cards/cards.component';
     RatingModule,
     InputSwitchModule,
     ToggleButtonModule,
-    SelectButtonModule
+    SelectButtonModule,
+    BrowserAnimationsModule
 
   ],
   providers: [],

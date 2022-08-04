@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PrimeNGConfig, SelectItemGroup,SelectItem } from "primeng/api";
+
 interface City {
   name: string,
   code: string

@@ -1,0 +1,225 @@
+.gentleView.middle {
+  background-size: 100% auto;
+  float: none;
+  left: initial;
+  width: 100%;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 30%);
+}
+
+.pad0.ptop {
+  padding-top: 0px !important;
+}
+
+.mar20.mbottom {
+  margin-bottom: 20px !important;
+}
+.pad20.ptop {
+  padding-top: 20px !important;
+}
+
+.pad20.pbottom {
+  padding-bottom: 20px !important;
+}
+.gradbg_greytrans {
+  background: -moz-linear-gradient(left, rgba(204,204,204,0.8) 0%, rgba(0,0,0,0) 70%);
+  background: -webkit-linear-gradient(left, rgba(204,204,204,0.8) 0%,rgba(0,0,0,0) 70%);
+  background: linear-gradient(to right, rgba(204,204,204,0.8) 0%,rgba(0,0,0,0) 70%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80cccccc', endColorstr='#00000000',GradientType=1 );
+}
+.heading2 {
+  font-family: 'GothamRounded-Book';
+}
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.tnorm {
+  font-weight: normal !important;
+}
+.ft24 {
+  font-size: 24px !important;
+}
+.heading2 {
+  font-family: Raleway;
+  font-size: 26px;
+  font-weight: bold;
+  color: #444 !important;
+}
+
+.gentleView #searchbox1 {
+  font-size: 13px;
+  overflow: hidden;
+  border: none;
+  padding: 0;
+  margin: 0;
+  background: none;
+  height: auto;
+}
+html, body, table, ul, ol, li, p, h1, h2, h3, h4, h5, h6, form, fieldset, a {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+}
+
+* {
+  font-family: 'GothamRounded-Book';
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+user agent stylesheet
+form {
+  display: block;
+  margin-top: 0em;
+}
+.form-group {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.posrel {
+  position: relative !important;
+}
+
+.form-group>label {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 8px;
+  font-weight: 700;
+  color: #404040;
+}
+
+p, ul, li, input, textarea, button, select, label {
+  padding: 0;
+  margin: 0;
+}
+
+
+#searchInputs input {
+  width: 140px;
+}
+
+.spn1 {
+  padding-right: 20px;
+  padding-left: 5px;
+}
+
+.span3 {
+  padding-left: 30px;
+}
+
+.spn2 {
+  width: 100px;
+}
+
+
+.col-md-0_5, .col-md-1, .col-md-1_5, .col-md-2, .col-md-2_5, .col-md-3, .col-md-3_5, .col-md-4, .col-md-4_5, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .mincol-md-0_5, .mincol-md-1, .mincol-md-1_5, .mincol-md-2, .mincol-md-2_5, .mincol-md-3, .mincol-md-3_5, .mincol-md-4, .mincol-md-4_5, .mincol-md-5, .mincol-md-6, .mincol-md-7, .mincol-md-8, .mincol-md-9, .mincol-md-10, .mincol-md-11, .mincol-md-12, .maxcol-md-0_5, .maxcol-md-1, .maxcol-md-1_5, .maxcol-md-2, .maxcol-md-2_5, .maxcol-md-3, .maxcol-md-3_5, .maxcol-md-4, .maxcol-md-4_5, .maxcol-md-5, .maxcol-md-6, .maxcol-md-7, .maxcol-md-8, .maxcol-md-9, .maxcol-md-10, .maxcol-md-11, .maxcol-md-12 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  float: left;
+}
+option {
+  font-weight: normal;
+  display: block;
+  white-space: nowrap;
+  min-height: 1.2em;
+  padding: 0px 2px 1px;
+}
+.form-group .selectwrp select {
+  display: block;
+  width: 100%;
+  padding: 12px 30px 12px 14px;
+  font-size: 14px;
+  color: #404040;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+  background-color: white;
+  border: 1px solid #eaebed;
+  border-radius: 4px;
+}
+
+.form-group .selectwrp select {
+  display: block;
+  width: 100%;
+  padding: 12px 30px 12px 14px;
+  font-size: 14px;
+  color: #404040;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+  background-color: white;
+  border: 1px solid #eaebed;
+  border-radius: 4px;
+}
+
+.mar30.mbottom {
+  margin-bottom: 30px !important;
+}
+hr {
+  border-width: 0;
+  border-top: 1px solid #eaebed;
+  height: 0px;
+  width: 100%;
+  margin: 0;
+}
+
+.clear30 {
+  clear: both;
+  display: block;
+  height: 30px !important;
+}
+
+
+.txn table tr {
+  text-align: center;
+}
+* {
+  font-family: 'GothamRounded-Book';
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+user agent stylesheet
+tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+}
+.table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 100%;
+}
+.tgreydark {
+  color: #404040;
+}
+.table {
+  border-collapse: separate;
+  text-indent: initial;
+  border-spacing: 2px;
+}
+
+.table.tb-bordered th, .table.tb-bordered td {
+  border: 1px solid #b8b8b8;
+}
+
+.table>thead th {
+  padding: 18px 6px;
+}
+.table>thead th {
+  background: #e7e7e7;
+  font-size: 12px;
+  padding: 18px;
+}

@@ -28,7 +28,12 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { ButtonModule } from 'primeng/button';
 import { RippleModule } from 'primeng/ripple';
 import { ButtonsComponent } from './buttons/buttons.component';
-
+import { TableComponent } from './table/table.component';
+import {TableModule} from 'primeng/table';
+import { MenuComponent } from './menu/menu.component';
+import {MenubarModule} from 'primeng/menubar';
+import {MenuItem} from 'primeng/api';
+import { MerchantinvoiceComponent } from './merchantinvoice/merchantinvoice.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +43,10 @@ import { ButtonsComponent } from './buttons/buttons.component';
     SliderComponent,
     OptionsComponent,
     CardsComponent,
-    ButtonsComponent
+    ButtonsComponent,
+    TableComponent,
+    MenuComponent,
+    MerchantinvoiceComponent
   ],
   imports: [
     BrowserModule,
@@ -60,7 +68,9 @@ import { ButtonsComponent } from './buttons/buttons.component';
     SelectButtonModule,
     BrowserAnimationsModule,
     ButtonModule,
-    RippleModule
+    RippleModule,
+    TableModule,
+    MenubarModule,
 
   ],
   providers: [],

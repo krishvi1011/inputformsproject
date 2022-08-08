@@ -1,110 +1,261 @@
+<div class="container" >
 <div class="middle gentleView pad0 ptop">
-  <div
-    class="row heading2 ft24 tnorm pad20 ptop pbottom mar20 mbottom gradbg_greytrans"
-  >
-    <div class="col-md-12">Invoices</div>
+
+  <style>
+      #searchInputs input {
+          width: 140px;
+      }
+
+      .spn1 {
+          padding-right: 20px;
+          padding-left: 5px;
+      }
+
+      .span3 {
+          padding-left: 30px;
+      }
+
+      .spn2 {
+          width: 100px;
+      }
+
+  </style>
+
+  <div class="row heading2 ft24 tnorm pad20 ptop pbottom mar20 mbottom gradbg_greytrans" >
+      <div class="col-md-12">
+          Invoices
+      </div>
   </div>
+  <script type="text/javascript" src="/static/js/jquery-1.8.2.min.js"></script>
+  <script type="text/javascript" src="/static/csv-gen.js"></script>
+
+  <script type="text/javascript">
+
+      window.csvfiledata = '';
+      window.csvfiledata += 'Payout Batch*~*Payout Date*~*Payout Amount'
+      disp;
+  </script>
+  <link href="/static/cal.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="/static/cal.js"></script>
+  <script type="text/javascript">
+      function displayDatePickerWrapper(bindFieldName, field) {
+          displayDatePicker(bindFieldName, field);
+          return false;
+      }
+  </script>
   <div id="searchbox1">
-    <form method="POST" id="merchant_form">
-      <div class="col-md-3">
-        <div class="form-group posrel">
-            <label for="">Select Month</label>
-            <div class="selectwrp">
-                <select name="month" id="month" onchange="" size="1">
-                    <option value="NONE">------</option>
-                    <option value="01">January</option>
-                    <option value="02">February</option>
-                    <option value="03">March</option>
-                    <option value="04">April</option>
-                    <option value="05">May</option>
-                    <option value="06">June</option>
-                    <option value="07">July</option>
-                    <option value="08">August</option>
-                    <option value="09">September</option>
-                    <option value="10">October</option>
-                    <option value="11">November</option>
-                    <option value="12">December</option>
-                </select>
-            </div>
-        </div>
-    </div>
-      <div class="col-md-3">
-        <div class="form-group porsel">
-          <label for>Select Year</label>
-          <div class="selectwrp">
-            <select name="year" id="year">
-              <option value="NONE">-------</option>
+      <form method="POST" id="merchant_form">
+          <div style="display:none"><input type="hidden" name="csrfmiddlewaretoken" value="2WdvmsSJMIBBfLr2doXWVbYqGjJIQ144"></div>
 
-              <option value="2021">2021</option>
 
-              <option value="2022">2022</option>
-            </select>
+
+          <div class="col-md-3">
+              <div class="form-group posrel">
+                  <label for="">Select Month</label>
+                  <div class="selectwrp">
+                      <select name="month" id="month" onchange="" size="1">
+                          <option value="NONE">------</option>
+                          <option value="01">January</option>
+                          <option value="02">February</option>
+                          <option value="03">March</option>
+                          <option value="04">April</option>
+                          <option value="05">May</option>
+                          <option value="06">June</option>
+                          <option value="07">July</option>
+                          <option value="08">August</option>
+                          <option value="09">September</option>
+                          <option value="10">October</option>
+                          <option value="11">November</option>
+                          <option value="12">December</option>
+                      </select>
+                  </div>
+              </div>
           </div>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="form-group posrel">
-          <label for="">Select Type</label>
-          <div class="radio-inline">
-            <input type="radio" name="invoicetype" value="invoice" checked="" />
-            Invoice
-            <input type="radio" name="invoicetype" value="invoicedata" />
-            Invoice Data
+          <div class="col-md-3">
+              <div class="form-group posrel">
+                  <label for="">Select Year</label>
+                  <div class="selectwrp">
+                      <select name="year" id="year">
+                          <option value="NONE">-------</option>
+
+                              <option value="2021">2021</option>
+
+                              <option value="2022">2022</option>
+
+                      </select>
+                  </div>
+              </div>
           </div>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="btn " >
-          <p-button label="Submit"></p-button>
-        </div>
-      </div>
-      <div class="clear30"></div>
-    </form>
+
+
+          <div class="col-md-3">
+              <div class="form-group posrel">
+                  <label for="">Select Type</label>
+                  <div class="radio-inline">
+                      <input type="radio" name="invoicetype" value="invoice" checked=""> Invoice
+                      <input type="radio" name="invoicetype" value="invoicedata"> Invoice Data
+                  </div>
+              </div>
+          </div>
+
+
+
+          <div class="col-md-3">
+              <input type="button" id="dlinvoice" class="btn btn-primary ln20 mar25 mtop" value="Search" onclick="save_form1();">
+          </div>
+          <div class="clear30"></div>
+          <!-- Select Month :
+          <select name="month" id="month" onchange="" size="1">
+              <option value="NONE">------</option>
+              <option value="01">January</option>
+              <option value="02">February</option>
+              <option value="03">March</option>
+              <option value="04">April</option>
+              <option value="05">May</option>
+              <option value="06">June</option>
+              <option value="07">July</option>
+              <option value="08">August</option>
+              <option value="09">September</option>
+              <option value="10">October</option>
+              <option value="11">November</option>
+              <option value="12">December</option>
+          </select> -->
+
+          <!-- <br><br>
+  Select Year :
+  <select name="year" id="year">
+      <option value="NONE">-------</option>
+
+      <option value="2021">2021</option>
+
+      <option value="2022">2022</option>
+
+  </select>
+
+  <br> <br> -->
+
+
+          <!-- <input type="button" id="dlinvoice" value="Search Invoice" onclick="save_form1();"/> -->
+      </form>
   </div>
-  <hr class="mar30 mbottom">
-  <div id="invoice_list" class="txn nofl wdFull">
-
-
-    <table class="table tb-bordered tb-stripped tgreydark">
-        <thead>
-        <tr>
-            <th scope="col" class="tcenter">Invoice For</th>
-            <th scope="col" class="tcenter">Mid</th>
 
 
 
-
-            <th scope="col" class="tcenter">Download Invoice</th>
-        </tr>
-        </thead>
-        <tbody id="tabbody">
-        <tr>
-
-                <td>
-                    <b>January, 2022</b>
-                </td>
+      <hr class="mar30 mbottom">
+      <div id="invoice_list" class="txn nofl wdFull">
 
 
-                    <td>
-                        MBK0198634
-                    </td>
+                  <table class="table tb-bordered tb-stripped tgreydark">
+                      <thead>
+                      <tr>
+                          <th scope="col" class="tcenter">Invoice For</th>
+                          <th scope="col" class="tcenter">Mid</th>
 
 
 
 
-                    <td>
-                        <a href="/invoicedownload/1/2022/0/">Download
-                            Invoice</a>
-                    </td>
+                          <th scope="col" class="tcenter">Download Invoice</th>
+                      </tr>
+                      </thead>
+                      <tbody id="tabbody">
+                      <tr>
+
+                              <td>
+                                <div style="text-align: center;">
+                                  <b>March, 2022</b></div>
+                              </td>
 
 
-                </tr>
+                                  <td>
+                                    <div style="text-align: center;">
+                                      MBK0198634</div>
+                                  </td>
 
 
-        </tbody>
-    </table>
 
 
-<div class="ft14 tgreydark tbold tcenter mar30 mtop mbottom"></div>
-</div>
-</div>
+                                  <td>
+                                    <div style="text-align: center;">
+                                      <a href="/invoicedownload/3/2022/0/">Download
+                                          Invoice</a></div>
+                                  </td>
+
+
+                              </tr>
+
+
+                      </tbody>
+                  </table>
+
+
+          <div class="ft14 tgreydark tbold tcenter mar30 mtop mbottom"></div>
+      </div>
+
+
+
+  <script type="text/javascript">
+      function save_form1() {
+
+          if ($("#month").val() == "NONE") {
+              alert("Please enter month")
+          }
+          else if ($("#year").val() == "NONE") {
+              alert("Please select Year")
+          }
+          else {
+              $("#merchant_form").submit();
+          }
+      }
+
+      function select_radio(action) {
+          if (action === "id_merchantname") {
+              $("#id_merchantnamewise").val([]);
+              $("#id_emailwise").val([]);
+              $("#id_numberwise").val([]);
+              $("#id_statewise").val([]);
+              $("#id_merchantname").attr('checked', 'checked');
+              $("#toshow_merchantname").show();
+              $("#toshow_email").hide();
+              $("#toshow_number").hide();
+              $("#toshow_states").hide();
+          }
+          else if (action === 'id_email') {
+              $("#id_merchantnamewise").val([]);
+              $("#id_emailwise").val([]);
+              $("#id_numberwise").val([]);
+              $("#id_statewise").val([]);
+              $("#id_email").attr('checked', 'checked');
+              $("#toshow_merchantname").hide();
+              $("#toshow_email").show();
+              $("#toshow_number").hide();
+              $("#toshow_states").hide();
+
+          } else if (action === 'id_number') {
+              $("#id_merchantnamewise").val([]);
+              $("#id_emailwise").val([]);
+              $("#id_numberwise").val([]);
+              $("#id_statewise").val([]);
+              $("#id_number").attr('checked', 'checked');
+              $("#toshow_merchantname").hide();
+              $("#toshow_email").hide();
+              $("#toshow_number").show();
+              $("#toshow_states").hide();
+          }
+           else if (action === 'id_state') {
+              $("#id_merchantnamewise").val([]);
+              $("#id_emailwise").val([]);
+              $("#id_numberwise").val([]);
+              $("#id_statewise").val([]);
+              $("#id_state").attr('checked', 'checked');
+              $("#toshow_merchantname").hide();
+              $("#toshow_email").hide();
+              $("#toshow_number").hide();
+              $("#toshow_states").show();
+          }
+      }
+
+  </script>
+
+
+      </div>
+    </div>

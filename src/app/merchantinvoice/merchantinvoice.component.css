@@ -4,6 +4,7 @@
   left: initial;
   width: 100%;
   box-shadow: 0 1px 2px 0 rgb(0 0 0 / 30%);
+  padding: 0px;
 }
 
 .pad0.ptop {
@@ -30,8 +31,6 @@
   font-family: 'GothamRounded-Book';
 }
 .row {
-  margin-right: -15px;
-  margin-left: -15px;
 }
 .tnorm {
   font-weight: normal !important;
@@ -45,6 +44,15 @@
   font-weight: bold;
   color: #444 !important;
 }
+.row {
+  --bs-gutter-x: 0;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-right: calc(-.5 * var(--bs-gutter-x));
+  margin-left: calc(-.5 * var(--bs-gutter-x));
+}
 
 .gentleView #searchbox1 {
   font-size: 13px;
@@ -55,21 +63,20 @@
   background: none;
   height: auto;
 }
-html, body, table, ul, ol, li, p, h1, h2, h3, h4, h5, h6, form, fieldset, a {
+html, body, ul, ol, li, p, h1, h2, h3, h4, h5, h6, form, fieldset, a {
   margin: 0px;
   padding: 0px;
   border: 0px;
 }
 
+.table{
+  padding: 1.5rem ;
+}
+
 * {
   font-family: 'GothamRounded-Book';
 }
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-user agent stylesheet
+
 form {
   display: block;
   margin-top: 0em;
@@ -185,30 +192,23 @@ hr {
 * {
   font-family: 'GothamRounded-Book';
 }
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
 
-user agent stylesheet
+
 tr {
   display: table-row;
   vertical-align: inherit;
   border-color: inherit;
 }
 .table {
-  border-collapse: collapse;
   width: 100%;
   max-width: 100%;
+  padding: 10px;
 }
 .tgreydark {
   color: #404040;
 }
 .table {
-  border-collapse: separate;
   text-indent: initial;
-  border-spacing: 2px;
 }
 
 .table.tb-bordered th, .table.tb-bordered td {
@@ -222,4 +222,58 @@ tr {
   background: #e7e7e7;
   font-size: 12px;
   padding: 18px;
+}
+
+.wdFull {
+  width: 100% !important;
+}
+.nofl {
+  float: none !important;
+}
+
+.txn {
+  width: 960px;
+  float: left;
+  padding: 10px 20px;
+  margin: 0px;
+}
+
+.middle{
+  background-color: white;
+}
+
+.container{
+  background-color: #fff;
+}
+
+.btn.btn-primary {
+  background-image: none;
+  text-shadow: none;
+  border-color: inherit;
+  box-shadow: none;
+}
+
+.btn.btn-primary {
+  background-color: #0073cf;
+  border: 1px solid #0073cf;
+}
+.mar25.mtop {
+  margin-top: 25px !important;
+}
+.btn:first-child {
+  *margin-left: 0;
+}
+input[type="button"], input[type="reset"], input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+.btn {
+  display: inline-block;
+  padding: 12px 14px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  border-radius: 4px;
+  position: relative;
+  cursor: pointer;
 }

@@ -1,0 +1,214 @@
+<div class="container">
+  <div class="middle gentleView pad0 ptop">
+    <div
+      class="row heading2 ft24 tnorm pad20 ptop pbottom mar20 mbottom gradbg_greytrans"
+    >
+      <div class="col-md-12">Payouts</div>
+    </div>
+    <div class="clear10"></div>
+
+    <link href="/static/cal.css" rel="stylesheet" type="text/css" />
+
+    <div id="searchbox1">
+      <div class="waoradio">
+        <div class="btn-group" data-toggle="buttons">
+          <b class="tgreydark mar10 mright">Search Payouts by: </b>
+          <label>
+            <input
+              type="radio"
+              name="options"
+              id="id_date"
+              onclick="select_radio('id_date');"
+              checked="checked"
+            />
+            <span> Date</span>
+          </label>
+          <label>
+            <input
+              type="radio"
+              name="options"
+              id="id_batch"
+              onclick="select_radio('id_batch');"
+            />
+            <span>Batch Id</span>
+          </label>
+          <label>
+            <input
+              type="radio"
+              name="options"
+              id="id_month"
+              onclick="select_radio('id_month');"
+            />
+            <span>Month Id</span>
+          </label>
+          <label>
+            <input
+              type="radio"
+              name="options"
+              id="id_utr"
+              onclick="select_radio('id_utr');"
+            />
+            <span>UTR Number</span>
+          </label>
+        </div>
+      </div>
+
+      <hr class="mar20 mtop mbottom" />
+
+      <form id="payout_form" action="" method="POST">
+        <div style="display: none">
+          <input
+            type="hidden"
+            name="csrfmiddlewaretoken"
+            value="2WdvmsSJMIBBfLr2doXWVbYqGjJIQ144"
+          />
+        </div>
+        <div class="row">
+          <div
+            id="id_batch_div"
+            class="col-md-2 nopad pright"
+            style="display: none"
+          >
+            <div class="form-group posrel">
+              <label for="">Batch Id : </label>
+              <input type="text" id="batch_id" name="batch_id" value="" />
+            </div>
+          </div>
+          <div class="col-md-4" id="id_date_div">
+            <div class="row">
+              <div class="form-group posrel col-md-6 nopad pright">
+                <label for="">Start Date : </label>
+                <input
+                  readonly="readonly"
+                  name="start_date"
+                  id="startDate"
+                  class="form-input"
+                  value="09/08/2022"
+                />
+                <input
+                  type="image"
+                  src="src/app/calender.gif"
+                  class="calIcon"
+                  onclick="return displayDatePickerWrapper('start_date', this);"
+                  align="top"
+                />
+              </div>
+              <div class="form-group posrel col-md-6 nopad pright">
+                <label for="">End Date : </label>
+                <input
+                  readonly="readonly"
+                  name="end_date"
+                  id="endDate"
+                  class="form-input"
+                  value="09/08/2022"
+                />
+                <input
+                  type="image"
+                  src="src/app/calender.gif"
+                  class="calIcon"
+                  onclick="return displayDatePickerWrapper('end_date', this);"
+                  align="top"
+                />
+              </div>
+            </div>
+            <br />
+
+            <div id="singledownload">
+              <div style="display: none">
+                <input
+                  type="hidden"
+                  name="csrfmiddlewaretoken"
+                  value="2WdvmsSJMIBBfLr2doXWVbYqGjJIQ144"
+                />
+              </div>
+              <input type="checkbox" name="singledownload" value="True" />Check
+              to download all<br />
+              <input type="hidden" name="payouts" value="[]" />
+            </div>
+
+            <br />
+          </div>
+          <div
+            id="id_month_div"
+            class="col-md-2 nopad pright"
+            style="display: none"
+          >
+            <div class="form-group posrel">
+              <label for="">Month : </label>
+              <select id="month_id" name="month_id" value="0">
+                <option disabled="" selected="">Choose month</option>
+                <option value="01">January</option>
+                <option value="02">February</option>
+                <option value="03">March</option>
+                <option value="04">April</option>
+                <option value="05">May</option>
+                <option value="06">June</option>
+                <option value="07">July</option>
+                <option value="08">August</option>
+                <option value="09">September</option>
+                <option value="10">October</option>
+                <option value="11">November</option>
+                <option value="12">December</option>
+              </select>
+            </div>
+
+            <div class="form-group posrel">
+              <label for="">Year : </label>
+              <select id="year_id" name="year_id" value="1">
+                <option disabled="" selected="">Choose year</option>
+                <option value="NONE">Select Year</option>
+
+                <option value="2016">2016</option>
+
+                <option value="2017">2017</option>
+
+                <option value="2018">2018</option>
+
+                <option value="2019">2019</option>
+
+                <option value="2020">2020</option>
+
+                <option value="2021">2021</option>
+
+                <option value="2022">2022</option>
+              </select>
+            </div>
+          </div>
+          <div
+            id="id_utr_div"
+            class="col-md-2 nopad pright"
+            style="display: none"
+          >
+            <div class="form-group posrel">
+              <label for="">UTR Number : </label>
+              <input type="text" id="utr_id" name="utr_id" value="" />
+            </div>
+          </div>
+          <div class="col-md-2">
+            <input
+              type="submit"
+              class="btn btn-primary submit_btn ln20 mar25 mtop"
+              value="Submit"
+            />
+          </div>
+          <div class="clear40"></div>
+        </div>
+      </form>
+    </div>
+    <div id="transaction_list" class="txn nofl wdFull">
+      <table class="table tb-bordered tb-stripped tgreydark">
+        <thead>
+          <tr bgcolor="#a4a4a4">
+            <th scope="col">Payout Batch</th>
+            <th scope="col">Payout Date</th>
+            <th scope="col">Payout Amount</th>
+            <th scope="col">Details</th>
+          </tr>
+        </thead>
+        <tbody id="tabbody"></tbody>
+      </table>
+      <br /><br />
+      <div style="text-align: center; font-weight: bold">No Payout Found.</div>
+    </div>
+  </div>
+</div>

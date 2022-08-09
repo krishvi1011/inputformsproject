@@ -34,6 +34,7 @@ import { MenuComponent } from './menu/menu.component';
 import {MenubarModule} from 'primeng/menubar';
 import {MenuItem} from 'primeng/api';
 import { MerchantinvoiceComponent } from './merchantinvoice/merchantinvoice.component';
+import { PayoutBatchComponent } from './payout-batch/payout-batch.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,7 +47,8 @@ import { MerchantinvoiceComponent } from './merchantinvoice/merchantinvoice.comp
     ButtonsComponent,
     TableComponent,
     MenuComponent,
-    MerchantinvoiceComponent
+    MerchantinvoiceComponent,
+    PayoutBatchComponent
   ],
   imports: [
     BrowserModule,
